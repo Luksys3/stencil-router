@@ -194,6 +194,8 @@ declare namespace LocalJSX {
   interface StencilRouteSwitch extends JSXBase.HTMLAttributes<HTMLStencilRouteSwitchElement> {
     'group'?: string;
     'location'?: LocationSegments;
+    'onOnRouteDidChange'?: (event: CustomEvent<LocationSegments>) => void;
+    'onOnRouteWillChange'?: (event: CustomEvent<LocationSegments>) => void;
     'routeViewsUpdated'?: (options: RouteViewOptions) => void;
     'scrollTopOffset'?: number;
   }
